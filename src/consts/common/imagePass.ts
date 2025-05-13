@@ -1,3 +1,3 @@
 export const IMAGE_PASH = {
-  HOME: { HERO: "/next.svg" },
+  HOME: { HERO: "/sample2.jpg" },
 };
