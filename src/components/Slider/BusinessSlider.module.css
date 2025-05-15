@@ -1,0 +1,55 @@
+.sliderSection {
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.slide {
+  text-align: center;
+}
+
+.imageWrapper {
+  width: 100%;
+}
+
+.image {
+  margin: 0 auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.textWrapper {
+  margin-top: 20px;
+}
+
+.textWrapper h3 {
+  font-size: 1.5rem;
+  color: #003049;
+  margin-bottom: 10px;
+}
+
+.textWrapper p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ドットカスタム */
+.customDots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.customDots li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.customDots li button {
+  font-size: 18px;
+  color: #aaa;
+  background: transparent;
+  border: none;
+}
+
+.customDots li.slick-active button {
+  color: #0077be;
+}
