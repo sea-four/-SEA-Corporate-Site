@@ -1,3 +1,4 @@
+import CEOMessage from "@/components/CEOMessage/CEOMessage";
 import Hero from "@/components/Hero/Hero";
 import Slider from "@/components/Slider/Slider";
 import { IMAGE_PASH } from "@/consts/common/imagePass";
@@ -12,6 +13,7 @@ export default function Stub() {
           companyName={SEA_COMMON.COMPANY_NAME}
           backgroundImageUrl={IMAGE_PASH.HOME.HERO}
         />
+        <CEOMessage />
         <Slider items={slideData} />
       </main>
     </>
