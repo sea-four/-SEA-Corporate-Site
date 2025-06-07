@@ -1,4 +1,5 @@
 import CEOMessage from "@/components/CEOMessage/CEOMessage";
+import CompanyProfile from "@/components/CompanyProfile/CompanyProfile";
 import Hero from "@/components/Hero/Hero";
 import BusinessSlider from "@/components/Slider/BusinessSlider";
 import { IMAGE_PASH } from "@/consts/common/imagePass";
@@ -14,6 +15,7 @@ export default function Stub() {
         />
         <CEOMessage />
         <BusinessSlider />
+        <CompanyProfile />
       </main>
     </>
   );
