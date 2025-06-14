@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/components/Header/header.module.css";
 import { SEA_COMMON } from "@/consts/common/text";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // ドロップダウンのホバー処理
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsOpen(true);
@@ -18,11 +20,25 @@ export default function Header() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsOpen(false);
-    }, 200); // ← 200ms のディレイ（お好みで調整）
+    }, 200); // ディレイ表示
   };
 
+  // スクロール時にヘッダー表示をトリガー
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setShowHeader(true);
+      } else {
+        setShowHeader(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${showHeader ? styles.visible : ""}`}>
       <div className={styles.container}>
         {/* ロゴと会社名 */}
         <div className={styles.logoArea}>
