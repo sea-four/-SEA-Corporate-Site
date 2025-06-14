@@ -10,6 +10,7 @@ export default function Home() {
         companyName={SEA_COMMON.COMPANY_NAME}
         backgroundImageUrl={IMAGE_PASH.HOME.HERO}
       />
+      <FounderMessage />
     </main>
   );
 }
