@@ -1,3 +1,4 @@
+import BusinessSection from "@/components/BusinessSection/BusinessSection";
 import FounderMessage from "@/components/FounderMessage/FounderMessage";
 import Hero from "@/components/Hero/Hero";
 import { IMAGE_PASH } from "@/consts/common/imagePass";
@@ -11,6 +12,7 @@ export default function Home() {
         backgroundImageUrl={IMAGE_PASH.HOME.HERO}
       />
       <FounderMessage />
+      <BusinessSection />
     </main>
   );
 }

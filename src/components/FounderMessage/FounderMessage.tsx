@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./FounderMessage.module.css";
+import SectionTitle from "../Accessory/Titte/SectionTitle";
 
 export default function FounderMessage() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export default function FounderMessage() {
     >
       <div className={styles.inner}>
         <div className={styles.left}>
-          <h2 className={styles.title}>◇　創業者の想い</h2>
+          <SectionTitle>創業者の想い</SectionTitle>
         </div>
         <div className={styles.right}>
           <p className={styles.subtitle}>
