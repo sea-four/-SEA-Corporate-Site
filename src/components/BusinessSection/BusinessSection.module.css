@@ -5,7 +5,19 @@
 }
 
 .block {
-  margin-bottom: 80px;
+  margin-bottom: 160px;
+}
+
+.bstitle {
+  margin: 20px 0;
+  border-bottom: thick double #0077be;
+  text-align: center;
+}
+
+.bstitletext {
+  margin: 10px 0;
+  font-size: 1.6rem;
+  color: #333;
 }
 
 .description {

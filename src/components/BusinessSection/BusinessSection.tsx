@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./BusinessSection.module.css";
 import SectionTitle from "../Accessory/Titte/SectionTitle";
+import styles from "./BusinessSection.module.css";
 
 type ServiceItem = {
   title: string;
@@ -22,7 +22,9 @@ const BusinessBlock = ({
   services,
 }: BusinessBlockProps) => (
   <section className={styles.block}>
-    <SectionTitle> {category}</SectionTitle>
+    <div className={styles.bstitle}>
+      <h2 className={styles.bstitletext}>{category}</h2>
+    </div>
     <p className={styles.description}>{description}</p>
     <div className={styles.services}>
       {services.map((service, index) => (
@@ -49,6 +51,7 @@ const BusinessBlock = ({
 export default function BusinessSection() {
   return (
     <div className={styles.container}>
+      <SectionTitle>事業内容</SectionTitle>
       <BusinessBlock
         category="WEB開発事業"
         description="企業様のニーズに合わせたWebサイトやWebアプリケーションの設計・開発を行っています。最新の技術を活用し、ユーザーエクスペリエンス（UX）やユーザビリティを重視した高品質なWebソリューションを提供します。業種や目的に合わせて、柔軟に対応できる開発を行い、ビジネスの成長をサポートします。"

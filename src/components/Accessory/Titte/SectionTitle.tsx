@@ -8,13 +8,13 @@ type SectionTitleProps = {
 
 export default function SectionTitle({ children }: SectionTitleProps) {
   return (
-    <h2 className={styles.category}>
+    <h1 className={styles.category}>
       <span className={styles.decorations}>
         <span className={styles.line}></span>
         <span className={styles.diamondSolid}></span>
         <span className={styles.diamondHollow}></span>
       </span>
       {children}
-    </h2>
+    </h1>
   );
 }
