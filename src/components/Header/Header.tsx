@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import styles from "@/components/Header/header.module.css";
 import { SEA_COMMON } from "@/consts/common/text";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +70,10 @@ export default function Header() {
                 <Link href="/company/profile" className={styles.dropdownItem}>
                   会社概要
                 </Link>
-                <Link href="/company/privacy" className={styles.dropdownItem}>
+                <Link
+                  href="/company/PrivacyPolicy"
+                  className={styles.dropdownItem}
+                >
                   プライバシーポリシー
                 </Link>
               </div>
