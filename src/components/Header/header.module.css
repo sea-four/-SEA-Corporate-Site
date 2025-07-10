@@ -1,29 +1,22 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 64px;
-  background-color: white;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: background-color 0.4s ease;
 }
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+.active {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
 }
 
 .logoArea {
@@ -38,24 +31,21 @@
 }
 
 .companyName {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
 }
 
 .nav {
   display: flex;
-  align-items: center;
   gap: 24px;
-  position: relative;
 }
 
 .navLink {
-  font-size: 1rem;
   color: #333;
   text-decoration: none;
+  font-weight: 500;
   position: relative;
-  transition: color 0.2s ease-in-out;
 }
 
 .navLink:hover {
@@ -69,26 +59,58 @@
 .dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  margin-top: 8px;
-  background-color: white;
+  background: white;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  min-width: 160px;
+  z-index: 2000;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
 }
 
 .dropdownItem {
   padding: 10px 16px;
-  text-decoration: none;
   color: #333;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
 }
 
 .dropdownItem:hover {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 16px;
+}
+
+.mobileItem {
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
 }
