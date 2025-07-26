@@ -1,5 +1,7 @@
 .profileSection {
-  padding: 40px 20px;
+  height: 50vh; /* 画面いっぱいの高さ */
+  padding: 20px 20px;
+  padding-top: 100px;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 12px;
