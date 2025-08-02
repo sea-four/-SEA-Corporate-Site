@@ -1,7 +1,6 @@
 import CEOMessage from "@/components/CEOMessage/CEOMessage";
 import CompanyProfile from "@/components/CompanyProfile/CompanyProfile";
 import Hero from "@/components/Hero/Hero";
-import BusinessSlider from "@/components/Slider/BusinessSlider";
 import { IMAGE_PASH } from "@/consts/common/imagePass";
 import { SEA_COMMON } from "@/consts/common/text";
 
@@ -14,7 +13,6 @@ export default function Stub() {
           backgroundImageUrl={IMAGE_PASH.HOME.HERO}
         />
         <CEOMessage />
-        <BusinessSlider />
         <CompanyProfile />
       </main>
     </>
